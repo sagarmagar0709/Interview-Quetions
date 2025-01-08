@@ -1,4 +1,4 @@
-re
+
  
 DevOps Shack
 100 Real-Time Scenario-Based DevOps
