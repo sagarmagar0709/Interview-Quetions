@@ -3,19 +3,23 @@
 databases (e.g., MySQL, MongoDB), message brokers (e.g., Apache Kafka), monitoring tools
 (e.g., Prometheus, Grafana), CI/CD pipelines (e.g., Jenkins), and containerized applications
 using Docker and Kubernetes.
-2. How have you injected the secrets in ConfigMaps?
+
+3. How have you injected the secrets in ConfigMaps?
 ● Answer: Secrets should not be injected in ConfigMaps as ConfigMaps are not designed for
 sensitive data. Instead, Kubernetes Secrets should be used. Secrets can be injected into
 pods via environment variables or mounted as files.
-3. How do you find which pod is taking more system resources across nodes
+
+5. How do you find which pod is taking more system resources across nodes
 using kubectl?
 ● Answer: Use kubectl top pod --all-namespaces to list resource usage by pods.
-Combine it with kubectl describe pod <pod-name> to get detailed resource usage.
-4. How do you know which worker node is consuming more resources across
+Combine it with kubectl describe pod <pod-name> to get detailed resource usage
+
+7. How do you know which worker node is consuming more resources across
 the clusters using kubectl?
 ● Answer: Use kubectl top nodes to see resource consumption across nodes. This will
 show CPU and memory usage on each node.
-5. What are the steps for configuring Prometheus and Grafana for monitoring
+
+9. What are the steps for configuring Prometheus and Grafana for monitoring
 Kubernetes clusters?
 ● Answer:
 1. Deploy Prometheus using Helm or a custom YAML configuration.
@@ -23,15 +27,17 @@ Kubernetes clusters?
 3. Deploy Grafana and configure it to use Prometheus as a data source.
 4. Import Kubernetes monitoring dashboards in Grafana.
 5. Set up alerting rules in Prometheus as needed.
-6. If 20 pods are running, how do you visualize the metrics of these pods in
+
+6. 
+7. If 20 pods are running, how do you visualize the metrics of these pods in
 Grafana?
 ● Answer: Configure Grafana to use Prometheus as the data source. Use existing Kubernetes
 dashboards or create custom dashboards to visualize metrics for all pods.
-7. What is Apache Kafka?
+8. What is Apache Kafka?
 ● Answer: Apache Kafka is a distributed event streaming platform used for building real-time
 data pipelines and streaming applications. It’s designed to handle large volumes of data in a
 distributed, fault-tolerant manner.
-8. How do you set up a Docker Hub private registry and integrate it with a CI/CD
+9. How do you set up a Docker Hub private registry and integrate it with a CI/CD
 pipeline? What is the procedure?
 ● Answer:
 1. Create a private repository on Docker Hub.
